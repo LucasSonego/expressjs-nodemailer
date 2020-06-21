@@ -1,0 +1,19 @@
+{
+  "name": "expressjs-nodemailer",
+  "license": "MIT",
+  "author": {
+    "name": "Lucas Sônego",
+    "email": "lucassonegoo@ufpr.br",
+    "url": "https://github.com/LucasSonego"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.10",
+    "xoauth2": "^1.2.0"
+  },
+  "scripts": {
+    "start": "node src/server.js"
+  }
+}

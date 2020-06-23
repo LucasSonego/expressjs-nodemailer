@@ -3,11 +3,16 @@ const transporter = require("./MailTransporter");
 
 class MailController {
   async send(req, res) {
-    if (req.body.user_name && req.body.user_email && req.body.text) {
+    if (
+      req.body.user_name &&
+      req.body.user_email &&
+      req.body.subject &&
+      req.body.text
+    ) {
       const mailOptions = {
         from: `Nodemailer <${req.body.user_email}>`,
         to: process.env.MAIL_RECEIVER,
-        subject: process.env.SUBJECT,
+        subject: `${process.env.SUBJECT}: ${req.body.subject}`,
         text: `${req.body.text}\n\n${req.body.user_name}\nEmail: ${req.body.user_email}`,
       };
 
